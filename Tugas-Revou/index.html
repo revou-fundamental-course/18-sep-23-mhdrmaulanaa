@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Contoh</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <!-- Judul di sebelah kiri -->
+        <a class="brand" href="#">E-Groceries</a>
+    
+        <!-- Menu di sebelah kanan -->
+        <div class="navbar-right">
+            <a class="menu-item" href="javascript:void(0);" onclick="scrollToTop()">Home</a>
+            <a class="menu-item" href="javascript:void(0);" onclick="scrollToOurPackage()">Our Package</a>
+            <a class="menu-item" href="#">Call us</a>
+        </div>
+    </div>
+
+    <!-- Konten halaman web lainnya akan berada di bawah navbar -->
+    <div class="content">
+        <h1>Top Rated E-Groceries Shop in Indonesian</h1>
+        <p>Every Day with best ingredients</p>
+
+        <!-- Container untuk gambar dan form -->
+        <div class="content-container">
+            <!-- Gambar dan Form diberi class "half-width" -->
+            <div class="half-width">
+                <!-- Gambar dengan ukuran yang lebih kecil -->
+                <img src="https://akcdn.detik.net.id/visual/2021/06/08/ilustrasi-sayur_169.jpeg?w=500" alt="Gambar Anda">
+                <p>Setiap hari beli sayur dan buah yang fresh disini</p>
+                <p><img src="https://w7.pngwing.com/pngs/1015/210/png-transparent-woman-computer-icons-human-head-girl-woman-face-people-logo.png" alt="Icon Kepala" style="width: 40px; height: 30px; margin-right: 5px;">Floren Hughes<br>Ibu Rumah Tangga, 28</p>
+                <hr> <!-- Garis horizontal -->
+            </div>
+
+            <div class="half-width">
+                <!-- Form "Contact Us" -->
+                <div class="contact-box">
+                    <h2>CONTACT US</h2>
+                    <p>Sales akan menghubungi anda 1x24 Jam setelah data kami terima.</p>
+                    <form action="#">
+                        <!-- Grup 1: Your Name -->
+                        <div class="form-group">
+                            <label for="name">Your Name:</label>
+                            <input type="text" id="name" name="name" placeholder="First and last name" required>
+                        </div>
+
+                        <!-- Grup 2: Email Address -->
+                        <div class="form-group">
+                            <label for="email">Email Address:</label>
+                            <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+                        </div>
+
+                        <!-- Grup 3: What Are You Interested In? -->
+                        <div class="form-group">
+                            <label for="interest">What Are You Interested In?</label>
+                            <select id="interest" name="interest">
+                                <option value="" disabled selected>Select option</option>
+                                <option value="product">Product Inquiry</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="support">Customer Support</option>
+                            </select>
+                        </div>
+            
+                        <!-- Mengganti teks "Submit" menjadi "SEND" -->
+                        <input type="submit" value="SEND">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Halaman kedua dengan heading "Our Product" -->
+        <div id="our-package" class="content">
+            <h2 style="background-color: blue; color: white; padding: 10px;">Our Package</h2>
+            <!-- Isi konten halaman "Our Package" -->
+            <div class="package-row">
+                <div class="package">
+                    <h3>Fresh Vegetables</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+
+                <div class="package">
+                    <h3>Fresh Fruits</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+
+                <div class="package">
+                    <h3>Instant Delivery</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="package-row">
+                <div class="package">
+                    <h3>Kitchen Ingredients</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+
+                <div class="package">
+                    <h3>Kitchen Set</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+
+                <div class="package">
+                    <h3>Bundling Set</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+
+                <div>
+                    <h1 style="text-align: center; background-color: blue; color: white; padding: 10px;">Your Closing Argument Headline</h1>
+                    <p style="text-align: center;">Toko yang menyediakan bahan-bahan makanan murah meriah guysssss mari dibeli dibeliiiiii</p>
+                    <div class="call-to-action">
+                        <p style="border: 2px solid blue; padding: 10px;">Call to Action</p>
+                    </div>
+                </div>
+               </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Fungsi untuk menggulir ke tampilan awal
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0, // Mengatur posisi tampilan awal (0 pixel dari atas)
+                behavior: 'smooth' // Efek scroll yang halus
+            });
+        }
+        // Fungsi untuk menggulirkan layar ke halaman Our Package
+        function scrollToOurPackage() {
+            var ourPackageElement = document.getElementById('our-package');
+            if (ourPackageElement) {
+                ourPackageElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script> 
+</body>
+</html>

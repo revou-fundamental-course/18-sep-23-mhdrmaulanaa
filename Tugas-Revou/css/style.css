@@ -1,0 +1,162 @@
+/* Styling untuk navbar */
+.navbar {
+    background-color: blue;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between; /* Mengatur jarak di sekitar elemen navbar */
+    align-items: center; /* Menengahkan vertikal */
+    padding: 10px 30px; /* Memberikan padding pada navbar */
+}
+
+/* Styling untuk judul "E-Groceries" */
+.brand {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px; /* Ukuran teks judul */
+}
+
+/* Styling untuk menu di sebelah kanan */
+.navbar-right {
+    display: flex;
+    gap: 20px; /* Jarak antara menu */
+}
+
+/* Styling untuk menu-item */
+.menu-item {
+    color: white;
+    text-decoration: none;
+    padding: 10px 16px;
+    border: 2px solid transparent; /* Membuat border transparan */
+    transition: border 0.3s; /* Efek transisi ketika hover */
+}
+
+/* Efek hover pada menu-item */
+.menu-item:hover {
+    border-color: white; /* Mengubah warna border saat hover */
+    color: white; /* Mengubah warna teks saat hover */
+}
+
+/* Styling untuk konten */
+.content {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Styling untuk judul h1 */
+.content h1 {
+    text-align: center;
+    font-size: 36px; /* Ukuran teks judul */
+}
+
+/* Styling untuk teks p */
+.content p {
+    text-align: center;
+}
+
+/* Styling untuk container utama */
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; /* Menengahkan vertikal */
+}
+
+/* Styling untuk bagian gambar */
+.half-width img {
+    max-width: 100%;
+    height: auto;
+    width: 50%; /* Mengatur lebar gambar menjadi 50% dari container */
+    margin-right: 5px; /* Menambahkan margin kanan 5px */
+}
+
+/* Styling untuk bagian form "Contact Us" */
+.half-width .contact-form {
+    flex: 1;
+    margin-left: 10px; /* Mengatur margin kiri menjadi 10px */
+    width: 50%; /* Mengatur lebar form menjadi 50% dari container */
+}
+
+/* Styling untuk kotak form "Contact Us" */
+.contact-box {
+    border: 2px solid blue; /* Border dengan warna biru */
+    padding: 20px; /* Padding di sekitar form */
+    margin-top: 20px; /* Jarak antara form dan elemen di atasnya */
+}
+
+/* Styling untuk label input */
+.contact-form label {
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Styling untuk input dan select */
+.contact-form input,
+.contact-form select {
+    margin-bottom: 30px;
+    width: 100%; /* Mengisi lebar 100% */
+}
+
+/* Styling untuk teks di bawah form */
+.contact-form p {
+    margin-top: 10px;
+}
+
+/* CSS untuk mengatur tiga judul dalam satu baris */
+.package-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.content h2 {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px; /* Menambahkan margin bawah agar terpisah dari konten di bawahnya */
+}
+
+.package {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan pada kotak */
+    border-radius: 5px; /* Menambahkan sudut bulat pada kotak */
+}
+
+/* Styling untuk judul paket */
+.package h3 {
+    color: blue;
+}
+
+/* Styling untuk judul besar "Your Closing Argument Headline" */
+.content h1:last-child {
+    text-align: center;
+    font-size: 30px; /* Ukuran teks judul besar */
+    margin-top: 50px; /* Jarak antara judul besar dengan konten di atasnya */
+    background-color: blue;
+    color: white;
+    padding: 10px;
+}
+
+
+/* Media query untuk layar dengan lebar kurang dari atau sama dengan 768px */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column; /* Mengubah tata letak menjadi satu kolom */
+    }
+
+    /* Mengatur lebar gambar menjadi 100% ketika layar lebih kecil */
+    .half-width img {
+        width: 100%;
+    }
+
+    /* Mengatur lebar form menjadi 100% ketika layar lebih kecil */
+    .half-width .contact-form {
+        margin-left: 0; /* Menghapus margin kiri */
+        width: 100%;
+    }
+}
